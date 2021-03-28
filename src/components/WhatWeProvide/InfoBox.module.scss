@@ -3,7 +3,6 @@
   border-radius: 15px;
   margin-bottom: 40px;
   padding: 20px 30px;
-  background: linear-gradient(75deg, rgba(208, 130, 252) 0%, rgba(112, 76, 208) 100%);
   width: 45%;
 
   img {
@@ -14,6 +13,14 @@
   h5 {
     font-size: 30px;
   }
+}
+
+.infoBoxStyle1 {
+  background: linear-gradient(to left top,  rgba(112, 76, 208) 0%, rgba(208, 130, 252) 100%);
+}
+
+.infoBoxStyle2 {
+  background: linear-gradient(to left top, rgba(208, 130, 252) 0%, rgba(112, 76, 208) 100%);
 }
 
 .description {

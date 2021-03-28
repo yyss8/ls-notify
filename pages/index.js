@@ -13,12 +13,16 @@ export default class extends React.Component {
     document.querySelectorAll('.nav-item a').forEach(selector => {
       selector.addEventListener('click', this.scrollElement)
     });
+
+    window.addEventListener('scroll', this.applyHeaderStyling);
   }
 
   componentWillUnmount() {
     document.querySelectorAll('.nav-item a').forEach(selector => {
       selector.removeEventListener('click', this.scrollElement);
     });
+
+    window.removeEventListener('scroll', this.applyHeaderStyling);
   }
 
   scrollElement(e) {
@@ -26,6 +30,14 @@ export default class extends React.Component {
     document.querySelector(`#${e.target.getAttribute('href').replace('#', '')}`).scrollIntoView({
       behavior: 'smooth',
     });
+  }
+
+  applyHeaderStyling() {
+    if (window.scrollY > 0) {
+      document.querySelector('#home').classList.add(styles.headerSticky);
+    } else {
+      document.querySelector('#home').classList.remove(styles.headerSticky);
+    }
   }
 
   render() {

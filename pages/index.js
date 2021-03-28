@@ -1,65 +1,52 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';;
+import Head from 'next/head';
+import styles from '../styles/Home.module.scss';
+import Header from '../src/components/Header/Header';
+import SectionMain from '../src/components/section-main/SectionMain';
+import WhatWeProvide from '../src/components/WhatWeProvide/WhatWeProvide';
+import FaqSection from '../src/components/Faq/Faq';
+import SuccessSection from '../src/components/OurSuccess/OurSuccess';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default class extends React.Component {
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+  componentDidMount() {
+    document.querySelectorAll('.nav-item a').forEach(selector => {
+      selector.addEventListener('click', this.scrollElement)
+    });
+  }
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+  componentWillUnmount() {
+    document.querySelectorAll('.nav-item a').forEach(selector => {
+      selector.removeEventListener('click', this.scrollElement);
+    });
+  }
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+  scrollElement(e) {
+    e.preventDefault();
+    document.querySelector(`#${e.target.getAttribute('href').replace('#', '')}`).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+  render() {
+    return (
+      <div >
+        <Head>
+          <title>LS Notify</title>
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        </Head>
+  
+        <div className={styles.background}>
+          <Header />
+          <SectionMain />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <WhatWeProvide />
+        <FaqSection />
+        <SuccessSection />
+      </div>
+    )
+  }
 }

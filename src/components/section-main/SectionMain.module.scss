@@ -1,0 +1,26 @@
+.sectionMain {
+  padding-bottom: 120px;
+  min-height: 100vh;
+}
+
+.topHeading {
+  font-size: 88px;
+  font-weight: 500;;
+  margin-top: 50px;
+}
+
+.subHeading {
+  font-size: 35px;
+  margin-top: 20px; 
+}
+
+.sectionMainScreen {
+  background-color: rgb(61, 61, 61);
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin: 8vh 10vh;
+
+  img {
+    width: 100%;
+  }
+}

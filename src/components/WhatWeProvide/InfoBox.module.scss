@@ -1,0 +1,22 @@
+.infoBox {
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+  background: linear-gradient(75deg, rgba(208, 130, 252) 0%, rgba(112, 76, 208) 100%);
+  width: 45%;
+
+  img {
+    height: 100px;
+    width: 150px; 
+  }
+
+  h5 {
+    font-size: 30px;
+  }
+}
+
+.description {
+  font-size: 30px;
+  margin-top: 50px;
+}

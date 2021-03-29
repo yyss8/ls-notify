@@ -1,9 +1,18 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
 .infoBox {
+  @include media-breakpoint-up(xl) {
+    width: 45%;
+  }
+
   color: white;
   border-radius: 15px;
   margin-bottom: 40px;
   padding: 20px 30px;
-  width: 45%;
+  min-height: 300px;
+  width: 100%;
 
   img {
     width: 100px; 

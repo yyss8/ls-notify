@@ -48,6 +48,10 @@
   }
 
   img {
+    @include media-breakpoint-down(lg) {
+      min-height: 35vh;
+    }
+
     width: 100%;
   }
 }

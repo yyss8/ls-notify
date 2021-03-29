@@ -25,6 +25,10 @@
   z-index: 5;
 
   h2 {
+    @include media-breakpoint-down(lg) {
+      padding: 0 15px;
+    }
+
     color: white;
     font-size: 50px;
     margin-bottom: 90px;

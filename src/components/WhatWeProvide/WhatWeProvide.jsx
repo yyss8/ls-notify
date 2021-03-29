@@ -10,10 +10,10 @@ const WhatWeProvide = () => {
   ];
 
   return <section className={Styles.whatWeProvideSection} id="feautres">
-    <div className={`container-lg ${Styles.layerCenter}`}>
+    <div className={`container-lg ${Styles.layerCenter} target`}>
       <h2>What do we provide?</h2>
       <div className={`d-flex flex-wrap justify-content-between ${Styles.infoBoxes}`}>
-        {infoBoxes.map(infoBox => <InfoBox title={infoBox.title} icon={infoBox.icon} description={infoBox.description} />)}
+        {infoBoxes.map(infoBox => <InfoBox key={infoBox.icon} title={infoBox.title} icon={infoBox.icon} description={infoBox.description} />)}
       </div>
     </div>
     <div className={Styles.layerLeft}></div>

@@ -1,0 +1,173 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  color: rgb(62, 62, 62);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 36, 209);
+  border-radius: 5px;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mobile-menu {
+  background-color: #202931;
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 200;
+  transition: all .3s linear;
+  pointer-events: none;
+}
+
+.mobile-menu > div {
+  padding: 15px 30px;
+}
+
+.mobile-menu > div:first-of-type {
+  border-bottom: 1px solid white;
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 25px;
+}
+
+.mobile-menu a:hover {
+  color: white;
+}
+
+.menu-open {
+  opacity: 1;
+  pointer-events: unset;
+  transform: translateX(0%);
+}
+
+.preloading {
+  color: #e4e4e4;
+  font-weight: 600;
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background: url("/images/pattern-ecommerce.png") no-repeat center;
+  background-size: cover;
+  z-index: 200;
+  overflow-y: hidden;
+  transition: opacity .5s linear, visibility .5s linear;
+}
+
+.preloading.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloading img {
+  width: 100px;
+  margin-right: 10px;
+  margin-bottom: -12px;
+}
+
+.preloading > div {
+  height: 100%;
+  width: 100%;
+}
+
+.loading-progress {
+  width: 150%;
+  left: -25%;
+  height: 2px;
+  border-radius: 2px;
+  position: relative;
+  background: rgba(255,255,255,0.2);
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.progress {
+  display: block;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 200px;
+    height: 2px;
+    left: -102px;
+    background: linear-gradient(135deg, #4579FF 0%, #9F22FF 45.35%, #E639AA 100%);
+    -webkit-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -moz-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@-webkit-keyframes loader-anim {
+  0% {
+      left: -202px
+  }
+
+  100% {
+      left: 202px
+  }
+}
+
+@-moz-keyframes loader-anim {
+  0% {
+      left: -202px
+  }
+
+  100% {
+      left: 202px
+  }
+}
+
+@keyframes loader-anim {
+  0% {
+      left: -202px
+  }
+
+  100% {
+      left: 202px
+  }
+}
+
+@font-face {
+  font-family: "BigNoodleTitling";
+  src: url("/fonts/Big-noodle-titling.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

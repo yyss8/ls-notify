@@ -4,6 +4,29 @@
 }
 
 .headerSticky {
+  position: fixed;
+  width: 100%;
   background-color: white;
   padding-bottom: 20px;
+}
+
+.mobileMenu {
+  background-color: rgb(61, 61, 61);
+}
+
+.hiddenArea {
+  :global .target {
+    transition: transform .5s linear, visibility .5s linear, opacity .5s linear;
+    transform: translateY(15%);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.displayed {
+  :global .target {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
 }

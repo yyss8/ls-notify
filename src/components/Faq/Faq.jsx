@@ -3,7 +3,7 @@ import styles from './Faq.module.scss';
 
 const Faq = () => {
   return <section className={styles.faqSection} id="faq">
-    <div className="container-lg">
+    <div className="container-lg target">
       <div className={`text-center ${styles.icon}`}><img src="/images/site-logo.png" /></div>
       <h2 className="text-center">FAQ</h2>
       <div className="d-flex justify-content-between">

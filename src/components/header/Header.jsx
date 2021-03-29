@@ -1,31 +1,35 @@
-import { Nav, Container } from 'react-bootstrap';
+import{ ReactSVG } from 'react-svg';
 import HeaderStyles from './Header.module.scss';
 
-const Header = () => {
-  return <header id="home" className={HeaderStyles.header}>
-    <Nav>
-      <Container fluid="lg" className="d-flex justify-content-between align-items-end">
-        <a href="#home" className={`navbar-brand d-flex align-items-end ${HeaderStyles.siteLogo}`}>
+const Header = ({setMenuState}) => {
+
+  return <header id="header" className={HeaderStyles.header}>
+    <nav className="nav">
+      <div className="container-lg d-flex justify-content-between align-items-center align-items-xl-end">
+        <a href="#home" className={`navbar-brand d-flex align-items-end ${HeaderStyles.siteLogo} mr-lg-5`}>
           <img src="images/site-logo.png" alt="LS Notify Site LOGO" />
           <h1>NOTIFY</h1>
         </a>
-        <div className={`d-flex justify-content-between ${HeaderStyles.navItems}`}>
-          <Nav.Item>
-            <a href="#home">Home</a>
-          </Nav.Item>
-          <Nav.Item>
-            <a href="#feautres">Features</a>
-          </Nav.Item>
-          <Nav.Item>
-            <a href="#faq">FAQ</a>
-          </Nav.Item>
-          <Nav.Item>
-            <a href="#success">Success</a>
-          </Nav.Item>
+        <div className={`${HeaderStyles.headerRight} d-none d-xl-flex justify-content-between`}>
+          <div className={`d-xl-flex justify-content-between align-items-end ${HeaderStyles.navItems}`}>
+            <div className="nav-item">
+              <a href="#home">Home</a>
+            </div>
+            <div className="nav-item">
+              <a href="#feautres">Features</a>
+            </div>
+            <div className="nav-item">
+              <a href="#faq">FAQ</a>
+            </div>
+            <div className="nav-item">
+              <a href="#success">Success</a>
+            </div>
+          </div>
+          <a href="https://ls-notify.metalabs.gg/dashboard" className={HeaderStyles.dashboardButton}>Dashboard</a>
         </div>
-        <a href="https://ls-notify.metalabs.gg/dashboard" className={HeaderStyles.dashboardButton}>Dashboard</a>
-      </Container>
-    </Nav>
+        <a className={`d-xl-none ${HeaderStyles.menuTrigger}`} onClick={() => setMenuState(true)}><ReactSVG src="/icons/menu-icon.svg" /></a>
+      </div>
+    </nav>
   </header>
 }
 

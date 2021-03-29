@@ -11,7 +11,7 @@ const Faq = () => {
         <InfoBox style="2" title="How do I get LS Notify?" description="You may join through restocks, giveaways or group buys." />
       </div>
       <div className="d-xl-flex justify-content-center">
-        <InfoBox style="2" title="Do you guys have 24/7 suupport?" description="Yes, we offer 24/7 support through all times." />
+        <InfoBox style="2" title="Do you guys have 24/7 support?" description="Yes, we offer 24/7 support through all times." />
       </div>
     </div>
   </section>

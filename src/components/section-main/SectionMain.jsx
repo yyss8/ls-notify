@@ -10,6 +10,7 @@ const SectionMain = () => {
     <div className="container-lg text-center target">
       <h2 className={Styles.topHeading}>A Retail Group Made By Resellers For Resellers</h2>
       <h3 className={Styles.subHeading}>With all the tools and necessities you may need</h3>
+      <h5><a className={Styles.checkoutButton}>Sold out</a></h5>
       <div className={Styles.sectionMainScreen}>
         <img src="/images/preview.png" />
         <a onClick={() => setVideoState(true)} className={Styles.videoPlayButton}>

@@ -121,7 +121,7 @@ a {
 }
 
 .progress {
-  display: block;
+    display: block;
     position: absolute;
     bottom: 0;
     overflow: hidden;
@@ -129,8 +129,6 @@ a {
     height: 2px;
     left: -102px;
     background: linear-gradient(135deg, #4579FF 0%, #9F22FF 45.35%, #E639AA 100%);
-    -webkit-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -moz-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
     animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 

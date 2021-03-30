@@ -26,7 +26,7 @@
     font-size: 60px;
   }
 
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;;
   margin-top: 70px;
 }
@@ -41,10 +41,10 @@
   background-color: rgb(61, 61, 61);
   border-radius: 15px;
   padding: 25px 20px;
-  margin: 8vh 0;
+  margin: 4vh 0 8vh;
 
   @include media-breakpoint-up(xl) {
-    margin: 8vh -20vh;
+    margin: 4vh -20vh 8vh;
   }
 
   img {
@@ -130,6 +130,21 @@
     background: rgba(255,255,255,0.7);
     border-radius: 50%;
     transition: all 200ms;
+  }
+}
+
+.checkoutButton {
+  cursor: default;
+  background: linear-gradient(135deg, #6d59fa 0%, #9F22FF 45.35%, #cf81fc 100%);
+  color: white;
+  display: inline-block;
+  padding: 18px 30px;
+  border-radius: 35px;
+  margin-top: 4vh;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
   }
 }
 

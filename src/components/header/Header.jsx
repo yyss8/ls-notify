@@ -25,7 +25,7 @@ const Header = ({setMenuState}) => {
               <a href="#success">Success</a>
             </div>
           </div>
-          <a href="https://ls-notify.metalabs.gg/dashboard" className={HeaderStyles.dashboardButton}>Dashboard</a>
+          <a href="https://dashboard.notifyls.com/login" className={HeaderStyles.dashboardButton}>Dashboard</a>
         </div>
         <a className={`d-xl-none ${HeaderStyles.menuTrigger}`} onClick={() => setMenuState(true)}><ReactSVG src="/icons/menu-icon.svg" /></a>
       </div>

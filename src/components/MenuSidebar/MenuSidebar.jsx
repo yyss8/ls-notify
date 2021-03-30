@@ -20,7 +20,7 @@ const MenuSidebar = ({menuOpen, setMenuState})  => {
         <a href="#success">Success</a>
       </div>
       <div className={styles.mobileDashboard}>
-        <a href="https://ls-notify.metalabs.gg/dashboard">Dashboard</a>
+        <a href="https://dashboard.notifyls.com/login">Dashboard</a>
       </div>
     </div>
     { menuOpen && <div className={styles.mobileOverlay} onClick={() => setMenuState(false)} /> }
